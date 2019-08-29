@@ -21,5 +21,9 @@ git commit -m"remove readme.txt"      这两条语句用来删除版本库中的
 git remote add origin git@github.com:jiejienidenuonuomi/nuonuomi.git    本地关联git网站上的远程库
 如果像这样输入代码，在windows7和10等会出现问题，需要找到版本库里.git文件里面的config，将config文件里面url=后面加https://(即地址改成https类型) 
 或者直接输入代码git remote add origin https://github.com/jiejienidenuonuomi/nuonuomi.git
+注jiejienidenuonuomi是用户名，nuonuomi是远程库名字
 git push -u origin master   把本地库里所有内容推送到远程库里（远程库空时，第一次使用时用这个命令）
 git push origin master   推送一次过后，以后本地提交后，就可以用这语句推送至远程库
+注：origin是git远程库的默认名，master是分支
+git clone https://github.com/duanchang-cyber/nuomi   克隆一个本地库（把远程库nuomi克隆到本地，本地取决于运行程序的地址）
+注：程序中nuomi是远程库名字，duanchang-cyber是用户名
