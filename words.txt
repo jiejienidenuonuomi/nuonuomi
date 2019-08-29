@@ -1,0 +1,20 @@
+cd 'F:\git files\learngit'     改变当前路径语法
+mkdir 。。。  在当前路径下创建文件。。。
+pwd 用于显示当前目录
+git init    把目录改成git可以管理的仓库
+git add readme.txt    把该文件添加到仓库
+git commit -m“。。。。”  把文件提交到仓库
+注：git add是把修改放到到暂存区，git commit是将暂存区的修改提交
+git status   查看仓库的当前的状态
+git diff     查看文件修改的内容
+git log      显示从最近到最远的提交日志（如果嫌输出太多可以搭配参数git log --pretty==oneline,前面显示的时版本号）
+git reset --HEAD^  回退到上一个版本（HEAD^^是回退到上两个版本，HEAD^^^是回退到上三个版本）
+cat readme.txt     查看文本的内容
+git reset --hard ...  (...处填的需要回到的版本号)
+git reflog         记录每一次的命令，查看命令历史
+git restore readme.txt    可以丢弃工作区的修改（工作区就是自己创建的文件）一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+rm readme.txt     删除文件（仅仅删除工作区中的文件，提交到版本库里面的还存在）
+git checkout -- readme.txt   用来恢复工作区误删，但版本库中还存在的文件
+git rm readme.txt      
+git commit -m"remove readme.txt"      这两条语句用来删除版本库中的文件
