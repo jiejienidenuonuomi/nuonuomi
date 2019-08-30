@@ -31,5 +31,7 @@ git checkout -b dev     创建并切换到分支dev
 上面一条语句相当于 git branch dev    git checkout dev两条语句
 git branch     查看当前分支（会列出所有分支，在当前分支前面有*号）
 git checkout master    切换至master分支
-
-
+git merge dev     把dev分支的内容合并到master分支上(用于合并指定分支到当前分支)
+git branch -d dev   删除dev分支
+git switch -c dev   切换到新的dev分支
+git switch master   切换到已有的master分支
