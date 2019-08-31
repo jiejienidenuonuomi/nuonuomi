@@ -48,5 +48,11 @@ git merge --no-ff -m "merge with no-ff" dev    禁用fast forward并合并分支
 git log --graph --pretty=oneline --abbrev-commit  用这些参数能隐藏部分输出，并能看到分支提交图
 #####
 git stash 把当前工作现场“储藏”起来，等以后恢复现场后继续工作（这里不用提交内容）
+注:工作区改变的内容只有在一分支中提交后并没合并，在其他分支就看不见。也就是说在你提交后再次开始修改的东西，在没提交前看见的是仅仅你电脑上的，而不是分支里内容。
+git stash list      查看没有提交但是储藏下来的工作现场
+git stash apply     恢复stash中的内容，但是并不会把stash中的内容删除
+git stash drop      删除stash中的内容
+git stash pop       恢复并删除stash中的内容
+git stash apply stash@{0}    恢复指定的stash
 
 
