@@ -45,7 +45,8 @@ git switch master   切换到已有的master分支
 #####
 git merge --no-ff -m "merge with no-ff" dev    禁用fast forward并合并分支
 注：合并分支git会默认用fast forword模式，在此模式下删除分支后会丢掉分支信息，这里--no-ff参数表示禁用fast forward，--m "..."表示要创建个新的提交
+git log --graph --pretty=oneline --abbrev-commit  用这些参数能隐藏部分输出，并能看到分支提交图
+#####
+git stash 把当前工作现场“储藏”起来，等以后恢复现场后继续工作（这里不用提交内容）
 
 
-
-git log --graph --pretty=oneline --abbrev-commit
