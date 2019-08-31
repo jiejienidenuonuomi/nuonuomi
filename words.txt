@@ -7,7 +7,8 @@ git commit -m“。。。。”  把文件提交到仓库
 注：git add是把修改放到到暂存区，git commit是将暂存区的修改提交
 git status   查看仓库的当前的状态
 git diff     查看文件修改的内容
-git log      显示从最近到最远的提交日志（如果嫌输出太多可以搭配参数git log --pretty==oneline,前面显示的时版本号）
+git log      显示从最近到最远的提交日志（如果嫌输出太多可以搭配参数git log --pretty==oneline,前面显示的是版本号）  
+git log状态下按q键退出
 git reset --HEAD^  回退到上一个版本（HEAD^^是回退到上两个版本，HEAD^^^是回退到上三个版本）
 cat readme.txt     查看文本的内容
 git reset --hard ...  (...处填的需要回到的版本号)
@@ -38,4 +39,13 @@ git branch -d dev   删除dev分支
 git switch -c dev   切换到新的dev分支
 git switch master   切换到已有的master分支
 注：切换到其他分支dev，并在dev中工作，干完了应该提交上去，但是此时是在dev分支上提交的，master分支提交点还没有变，因此需要把dev分支上的内容合并到master分支上，
-合并完成后要记得删除分支或把指针指向master主分支，另外向远程库提交一定在主分支上（文件夹显示的是当前分支的内容）
+合并完成后要记得删除分支或把指针指向master主分支，另外向远程库提交一定在主分支上（文件夹显示的是当前分支的内容）。一定要记得删除不必要的分支，因为关掉界面分支还会存在。
+#####
+当两个分支都被修改，合并分支时会出现conflict问题，这时要打开文本手动直接修改内容，然后提交，再将多余的分支删除
+#####
+git merge --no-ff -m "merge with no-ff" dev    禁用fast forward并合并分支
+注：合并分支git会默认用fast forword模式，在此模式下删除分支后会丢掉分支信息，这里--no-ff参数表示禁用fast forward，--m "..."表示要创建个新的提交
+
+
+
+git log --graph --pretty=oneline --abbrev-commit
