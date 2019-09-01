@@ -5,3 +5,5 @@ Creating new branch is quick.
 Creating a new branch is quick and simple.yes or no 
 not commit and not add
 dev add 
+not commit and not add
+
