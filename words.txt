@@ -57,6 +57,14 @@ git stash apply stash@{0}    恢复指定的stash
 git cherry-pick 4c805e2      复制一个特定的提交到当前分支(提交的版本号可以查git log)
 git branch -D dev         对于没有还合并的分支（不需要该分支的内容时）用这来删除
 #####
+git remote              查看远程库信息
+git remove -v           查看远程库详细信息
+git push origin master   把分支上的所有本地提交推送到远程库（要指定分支）
+git push origin dev      要推送哪个分支就把dev改成什么
+
+
+
+
 
 
 
