@@ -61,11 +61,10 @@ git remote              查看远程库信息
 git remove -v           查看远程库详细信息
 git push origin master   把分支上的所有本地提交推送到远程库（要指定分支）
 git push origin dev      要推送哪个分支就把dev改成什么
-
-
-
-
-
+git checkout -b dev origin/dev    要在dev分支上开发，就必须创建远程origin的dev分支到本地，用这个命令创建本地dev分支(clone远程库时只能看到本地的master分支)
+注：当两个人在同时修改dev分支时并都提交推送到远程库，会发生conflict，需要解决冲突
+git pull （在用之前需要指定本地dev分支和远程origin/dev分支的链接，用了之后会有提示链接格式）把最新的提交从origin/dev抓下来（然后在本地合并，解决冲突并推送）
+git branch --set-upstream-to <branch-name> origin/<branch-name>
 
 
 
